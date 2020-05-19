@@ -57,21 +57,4 @@ const styles = StyleSheet.create({
     padding: 50
   },
 
-  listItmes: {
-    marginVertical: 5,
-    padding: 2,
-    backgroundColor: '#ccc',
-    borderColor: 'black',
-    borderWidth: 1
-  },
-  tinyLogo: {
-    width: 50,
-    height: 50,
-  },
-  logo: {
-    width: 66,
-    height: 58,
-  },
-
-
 });
