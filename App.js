@@ -15,13 +15,19 @@ export default function App() {
     { key: Math.random().toString(), value: enteredGoal }]);
   }
 
+  const removeGoalHandler = goalKey => {
+    setAllGoals(currentGoals => {
+      return currentGoals.filter((goal) => goal.key !== goalKey);
+    });
+  }
+
   return (
     <View style={styles.screen} >
       <GoalInput onAddGoal={addGoalHandler} />
 
       <FlatList
         data={allGoals}
-        renderItem={itemData => <GoalItem title={itemData.item.value} />}
+        renderItem={itemData => <GoalItem id={itemData.item.key} title={itemData.item.value} onDelete={removeGoalHandler} />}
       />
 
     </View>
